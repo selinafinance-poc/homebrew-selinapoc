@@ -11,7 +11,7 @@ class NewCli < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/selinafinance-poc/new-cli/releases/download/v0.0.1/new-cli-darwin-arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "0a12c53a21e2f08218a1e7bf249d5f1ede35bdac4c7fa448f9a41f8adaa95032"
+      sha256 "61e08caff4217f1a60c0833cb0a65dd146853828df727605e5019e089825ab02"
 
       def install
         bin.install "new-cli"
@@ -19,7 +19,7 @@ class NewCli < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/selinafinance-poc/new-cli/releases/download/v0.0.1/new-cli-darwin-amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "9265f5f5f4d9262cd19533eb59e8ab99972da92fd2629629aa485b35fb1d1bb0"
+      sha256 "50756d99bcce3653c71bad109d92888d1c6bac101f14caf6ead9eddb14dd7ee3"
 
       def install
         bin.install "new-cli"
@@ -28,17 +28,17 @@ class NewCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/selinafinance-poc/new-cli/releases/download/v0.0.1/new-cli-linux-amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "fd6623fd44415c48367bb8287da23ba65939bca2213ada0903eac5188e6cf676"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/selinafinance-poc/new-cli/releases/download/v0.0.1/new-cli-linux-arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "4d68c5ead9610c7eb2e7c80c5a2df5bbe6c965f93bede8aeb9d52b1ebdce0a78"
 
       def install
         bin.install "new-cli"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/selinafinance-poc/new-cli/releases/download/v0.0.1/new-cli-linux-arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "0456954c383380293e9476e74fe5fa795f3145326f09174848da810ea4550a9b"
+    if Hardware::CPU.intel?
+      url "https://github.com/selinafinance-poc/new-cli/releases/download/v0.0.1/new-cli-linux-amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "23fe60607ac415de7e92b8833a558b87356938830acbd095217d7b2a09628d4c"
 
       def install
         bin.install "new-cli"
