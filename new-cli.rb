@@ -9,7 +9,7 @@ class NewCli < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/selinafinance-poc/new-cli/releases/download/v0.0.1/new-cli-darwin-arm64.tar.gz", using: GitHubPrivateRepositoryDownloadStrategy
+      url "https://github.com/selinafinance-poc/new-cli/releases/download/v0.0.1/new-cli-darwin-arm64.tar.gz", using: CurlDownloadStrategy
       sha256 "38c3319b15c3fc0b452fddd54a60abce98e37bd6073588b4b46b7e50e794a727"
 
       def install
@@ -17,7 +17,7 @@ class NewCli < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/selinafinance-poc/new-cli/releases/download/v0.0.1/new-cli-darwin-amd64.tar.gz", using: GitHubPrivateRepositoryDownloadStrategy
+      url "https://github.com/selinafinance-poc/new-cli/releases/download/v0.0.1/new-cli-darwin-amd64.tar.gz", using: CurlDownloadStrategy
       sha256 "5c52f2fcd15598b0b849dc9cd989322226b936570c6d047855e58a07e14f36b2"
 
       def install
@@ -28,7 +28,7 @@ class NewCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/selinafinance-poc/new-cli/releases/download/v0.0.1/new-cli-linux-arm64.tar.gz", using: GitHubPrivateRepositoryDownloadStrategy
+      url "https://github.com/selinafinance-poc/new-cli/releases/download/v0.0.1/new-cli-linux-arm64.tar.gz", using: CurlDownloadStrategy
       sha256 "7f31b66aedb8178925fea4be5474dcd3a596c096ee1f4122bf7a726a59003aad"
 
       def install
@@ -36,7 +36,7 @@ class NewCli < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/selinafinance-poc/new-cli/releases/download/v0.0.1/new-cli-linux-amd64.tar.gz", using: GitHubPrivateRepositoryDownloadStrategy
+      url "https://github.com/selinafinance-poc/new-cli/releases/download/v0.0.1/new-cli-linux-amd64.tar.gz", using: CurlDownloadStrategy
       sha256 "d5940c6d24e009d99395682cfa504e5816fb71ff1a651ae22f4a20fc3e5244ed"
 
       def install
