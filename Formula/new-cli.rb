@@ -6,20 +6,20 @@ require_relative "../lib/custom_download_strategy"
 class NewCli < Formula
   desc ""
   homepage "https://https://github.com/selinafinance-poc/new-cli"
-  version "0.0.3"
+  version "0.0.4"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/selinafinance-poc/new-cli/releases/download/v0.0.3/new-cli-darwin-arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "a51b1985738548191e75b453e4a283d2ac82f6741a848eaff516d50d6c84b398"
+      url "https://github.com/selinafinance-poc/new-cli/releases/download/v0.0.4/new-cli-darwin-arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "ee55fd4b9c7f612428e84a3372824ad903a1f77986c2c8ecb747c79398e4c554"
 
       def install
         bin.install "new-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/selinafinance-poc/new-cli/releases/download/v0.0.3/new-cli-darwin-amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "db52d810c95d273197685b3e0cdaac8768f3da1b7f018bae9ddcd8289eefd965"
+      url "https://github.com/selinafinance-poc/new-cli/releases/download/v0.0.4/new-cli-darwin-amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "62ea7e28e1d42a05a5a9f7e5e6724623b71cc589418b9b0183ecd7ad3eceedb2"
 
       def install
         bin.install "new-cli"
@@ -28,17 +28,17 @@ class NewCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/selinafinance-poc/new-cli/releases/download/v0.0.3/new-cli-linux-arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "45f29d3a80d0664b246f61bdb995fdb9ef27d2feefe335ea3341862185146398"
+    if Hardware::CPU.intel?
+      url "https://github.com/selinafinance-poc/new-cli/releases/download/v0.0.4/new-cli-linux-amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "a303b25347d3f7bce4e53273a9f4765209b4d692572131cedd5b9bef808d5c5b"
 
       def install
         bin.install "new-cli"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/selinafinance-poc/new-cli/releases/download/v0.0.3/new-cli-linux-amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "402c043116874de1165d206d80fa4971d84b0ef48666474773389ebd13a7a1ec"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/selinafinance-poc/new-cli/releases/download/v0.0.4/new-cli-linux-arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "619fd2cfdf232f076ff82d53eb856715745982fd4b305a24809db69f4b7d94e0"
 
       def install
         bin.install "new-cli"
