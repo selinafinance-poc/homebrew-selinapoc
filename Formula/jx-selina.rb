@@ -6,20 +6,20 @@ require_relative "../lib/custom_download_strategy"
 class JxSelina < Formula
   desc ""
   homepage "git@github.com:selinafinance-devops/jx-selina"
-  version "0.2.1"
+  version "0.2.2"
 
   on_macos do
     on_intel do
-      url "https://github.com/Selina-Finance/jx-selina/releases/download/v0.2.1/jx-selina-darwin-amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "7e133799a93f042dfe909c971a7c88eb6ec850b6558e039f6a811ba346219ff8"
+      url "https://github.com/Selina-Finance/jx-selina/releases/download/v0.2.2/jx-selina-darwin-amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "2bc1a614bd9d89b47cbe4fdaa39c58471411e0863c65b86be1c832ac926fe7e0"
 
       def install
         bin.install "jx-selina"
       end
     end
     on_arm do
-      url "https://github.com/Selina-Finance/jx-selina/releases/download/v0.2.1/jx-selina-darwin-arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "b949e29b50dbb21bcff58cc744bac6b49d59e9cd0d1a9ffe9ae334d8ad1d1482"
+      url "https://github.com/Selina-Finance/jx-selina/releases/download/v0.2.2/jx-selina-darwin-arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "31ad459da3090032cbcb6a45f96e9b7ccf929c4145a553f5bd6307662e760778"
 
       def install
         bin.install "jx-selina"
@@ -30,8 +30,8 @@ class JxSelina < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/Selina-Finance/jx-selina/releases/download/v0.2.1/jx-selina-linux-amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "f1fc3a3db3851e25103f4e880f0e606b855bd8ec29450144771335334b8fca8f"
+        url "https://github.com/Selina-Finance/jx-selina/releases/download/v0.2.2/jx-selina-linux-amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "3ccc464d8f62d2731baaadd7b07b08c2bd4f21baa8000d4547eddc4aa9125c76"
 
         def install
           bin.install "jx-selina"
@@ -40,8 +40,8 @@ class JxSelina < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/Selina-Finance/jx-selina/releases/download/v0.2.1/jx-selina-linux-arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "957141a91094cbb677a92dad8906d522c3e9e408d743d1e45d6a847b388de1ca"
+        url "https://github.com/Selina-Finance/jx-selina/releases/download/v0.2.2/jx-selina-linux-arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "1652a19913210c41e5430d9d515654746a4d001b9b8cde2bbb1c0f18d2602a69"
 
         def install
           bin.install "jx-selina"
